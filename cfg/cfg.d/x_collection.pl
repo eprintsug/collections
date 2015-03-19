@@ -6,9 +6,12 @@ $c->{plugins}->{"Screen::EPrint::Box::CollectionMembership"}->{appears}->{summar
 $c->{plugins}->{"Collection"}->{params}->{disable} = 0;
 $c->{plugins}->{"InputForm::Component::Field::CollectionSelect"}->{params}->{disable} = 0;
 $c->{plugins}->{"Screen::NewCollection"}->{params}->{disable} = 0;
-$c->{plugins}->{"Screen::EPrint::CollectionEdit"}->{params}->{disable} = 0;
-$c->{plugin_alias_map}->{"Screen::EPrint::Edit"} = "Screen::EPrint::CollectionEdit";
-$c->{plugin_alias_map}->{"Screen::EPrint::CollectionEdit"} = undef;
+
+$c->{plugins}->{"InputForm::Component::Field::AddToCollection"}->{params}->{disable} = 0;
+
+#$c->{plugins}->{"Screen::EPrint::CollectionEdit"}->{params}->{disable} = 0;
+#$c->{plugin_alias_map}->{"Screen::EPrint::Edit"} = "Screen::EPrint::CollectionEdit";
+#$c->{plugin_alias_map}->{"Screen::EPrint::CollectionEdit"} = undef;
 
 
 $c->{z_collection_validate_eprint} = $c->{validate_eprint};

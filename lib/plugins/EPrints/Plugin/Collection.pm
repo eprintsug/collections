@@ -254,7 +254,8 @@ sub belongs
 	my $r = $self->value("relation");
 	foreach my $relation_hash ( @$r )
 	{
-		if( $relation_hash->{uri} == $targetid )
+		$self->{session}->log($relation_hash->{uri}." == ".$targetid);
+		if( $relation_hash->{uri} eq $targetid )
 		{
 			return 1;
 		}
@@ -279,15 +280,21 @@ sub get_blacklist
 
 sub add_to_collection
 {
-	my( $self, $targetid ) = @_;
+#	my( $self, $targetid ) = @_;
+	my( $self, $eprint ) = @_;
+	
 	
 	my $repo = $self->{session};
-
 	return 0 unless( $self->is_collection );
 
-	return 0 if( $self->belongs( $targetid ) );
+#	return 0 if( $self->belongs( $targetid ) );
+	print STDERR "belongs? ".$self->belongs( $eprint->internal_uri )."\n";
+	return 0 if( $self->belongs( $eprint->internal_uri ) );
 
-	my $eprint = $repo->eprint( $targetid );
+
+
+	#my $eprint = $repo->eprint( $targetid );
+#	my $eprint = EPrints::DataSet->get_object_from_uri( $repo, $targetid );
 	if( !defined $eprint )
 	{
 		return 0; 
@@ -300,36 +307,63 @@ sub add_to_collection
 
 	my $r = $self->value("relation");
 
-	push @$r, { type => 'http://purl.org/dc/terms/hasPart', uri => $targetid };
+#	push @$r, { type => 'http://purl.org/dc/terms/hasPart', uri => $targetid };
+	push @$r, { type => 'http://purl.org/dc/terms/hasPart', uri => $eprint->internal_uri };
 
 	$self->set_value( 'relation', $r );
 	$self->commit;
 	$self->remove_static;
+
+	#RM adds this inverse relation... it will cause a md5 carp if bazaar package is renabled...
+	my $er = $eprint->value("relation");
+
+	push @$er, { type => 'http://purl.org/dc/terms/isPartOf', uri => $self->internal_uri };
+
+	$eprint->set_value( 'relation', $er );
+	$eprint->commit;
+	$eprint->remove_static;
 
 	return 1;
 }
 
 sub remove_from_collection
 {
-	my( $self, $targetid ) = @_;
+	my( $self, $eprint ) = @_;
 
 	return 0 unless( $self->is_collection );
 
-	return 0 unless( $self->belongs( $targetid ) );
+	return 0 unless( $self->belongs( $eprint->internal_uri ) );
 
 	my $r = $self->value("relation");
 	my $newr;
 
 	foreach( @$r )
 	{
-		push @$newr, $_ unless( $_->{uri} eq $targetid );
+		push @$newr, $_ unless( $_->{uri} eq $eprint->internal_uri );
 	}
 
 	$self->set_value( 'relation', $newr );
 	$self->commit;
 
 	$self->remove_static;
-	
+
+	#RM adds inverse removal too	
+#	my $eprint = EPrints::DataSet->get_object_from_uri( $self->{session}, $eprint->internal_uri );
+	if( !defined $eprint )
+	{
+		return 0; 
+	}
+	my $er = $eprint->value("relation");
+	my $newer;
+
+	foreach( @$er ){
+		push @$newer, $_ unless( $_->{uri} eq $self->internal_uri );
+	}
+	$eprint->set_value( 'relation', $newer );
+	$eprint->commit;
+
+	$eprint->remove_static;
+
 	return 1;
 }
 
@@ -337,7 +371,9 @@ sub get_parent_collections
 {
 	my( $self, $session ) = @_;
 
-	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
+#	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
+	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->internal_uri.';';
+
 	my $sth = $session->get_database->prepare( $sql );
 	$session->get_database->execute( $sth, $sql );
 
@@ -356,7 +392,9 @@ sub get_parent_collections_hash
 {
 	my( $self, $session ) = @_;
 	
-	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
+#	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
+	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->internal_uri.';';
+
 	my $sth = $session->get_database->prepare( $sql );
 	$session->get_database->execute( $sth, $sql );
 

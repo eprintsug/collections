@@ -1,4 +1,4 @@
-package EPrints::Plugin::InputForm::Component::Field::CollectionSelect;
+package EPrints::Plugin::InputForm::Component::Field::AddToCollection;
 
 use EPrints;
 use EPrints::Plugin::Collection;
@@ -14,7 +14,7 @@ sub new
 
 	my $self = $class->SUPER::new( %opts );
 
-	$self->{name} = 'Collection Select';
+	$self->{name} = 'Add to Collection';
 	$self->{visible} = 'all';
 	$self->{visdepth} = 1;
 
@@ -241,18 +241,21 @@ sub _render_userdeposits_tab
 	
 	$list = $list->reorder( '-status_changed' );
 
-	my $list_all_collections = _get_all_collections( $session );
-	print STDERR $list_all_collections->count;
+	my $list_all_not_collections = _get_all_not_collections( $session );
+	print STDERR $list_all_not_collections->count."\n";
 
-	$list = $list->remainder( $list_all_collections );
+#	$list = $list->remainder( $list_all_collections );
+	my $my_collections = $list->remainder( $list_all_not_collections );
+	print STDERR $my_collections->count."\n";;
 
-	if( !$list->count )
+
+	if( !$my_collections->count )
 	{
 		$results_div->appendChild( $self->html_phrase( 'no_deposits' ) );
 	}
 	else
 	{
-		$results_div->appendChild( _render_checkbox_table( $session, $list, $blacklist ) );
+		$results_div->appendChild( _render_checkbox_table( $session, $my_collections, $blacklist ) );
 	}
 
 	return $div;
@@ -305,7 +308,6 @@ sub _do_search
 	{
 		push @meta_fields, EPrints::Utils::field_from_config_string( $ds, $fieldname );
 	}
-
 	my $searchexp = new EPrints::Search(
 		session=>$session,
 		dataset=>$ds,
@@ -318,7 +320,9 @@ sub _do_search
 	my $results = $searchexp->perform_search;
 	my $all_collections = _get_all_collections( $session );
 
-	return $results->remainder( $all_collections );
+#	return $results->remainder( $all_collections );
+	return $all_collections->remainder( $results );
+
 }
 
 sub _render_search_box
@@ -472,13 +476,13 @@ sub _render_checkbox_table
 		if( $blacklist->{$rec->internal_uri} )
 		{
 #			$td->appendChild( $session->make_element( 'input', id=>'_add_'.$rec->get_id, class=>'ep_cs_checkbox', type=>'checkbox', checked=>'yes', name=>'_add_'.$rec->get_id ) );
-			$td->appendChild( $session->make_element( 'input', id=>'_add_'.$rec->internal_uri, class=>'ep_cs_checkbox', type=>'checkbox', checked=>'yes', name=>'_add_'.$rec->internal_uri ) );
+			$td->appendChild( $session->make_element( 'input', id=>'_add_'.$rec->internal_uri, class=>'ep_atc_checkbox', type=>'checkbox', checked=>'yes', name=>'_add_'.$rec->internal_uri ) );
 
 		}
 		else
 		{
 #			my $check = $session->make_element( 'input', id=>'_add_'.$rec->get_id, class=>'ep_cs_checkbox', type=>'checkbox', name=>'_add_'.$rec->get_id );
-			my $check = $session->make_element( 'input', id=>'_add_'.$rec->internal_uri, class=>'ep_cs_checkbox', type=>'checkbox', name=>'_add_'.$rec->internal_uri );
+			my $check = $session->make_element( 'input', id=>'_add_'.$rec->internal_uri, class=>'ep_atc_checkbox', type=>'checkbox', name=>'_add_'.$rec->internal_uri );
 
 			$td->appendChild( $check );
 		}
@@ -507,4 +511,25 @@ sub _get_all_collections
 	
 	return $search_all_collections->perform_search;
 }
+sub _get_all_not_collections
+{
+	my( $session ) = @_;
+	
+	my $ds = $session->get_repository->get_dataset( 'eprint' );
+	my $search_all_collections = new EPrints::Search(
+		session=>$session,
+		dataset=>$ds,
+		custom_order=>'title' );
+	my $type = $ds->get_field("type");
+	my @types = $type->get_unsorted_values;
+	@types  = grep ! /^collection$/, @types;	
+	$search_all_collections->add_field(
+		$ds->get_field( 'type' ),
+		join(" ", @types),
+		'IN',
+		'ANY' );
+	
+	return $search_all_collections->perform_search;
+}
+
 1;

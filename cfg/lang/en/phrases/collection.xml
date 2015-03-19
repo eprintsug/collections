@@ -46,4 +46,32 @@
 
 	<epp:phrase id="Plugin/Screen/NewCollection:action:create:title">New Collection</epp:phrase>
 
+
+
+
+
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:search_no_matches"><p>No Matches</p></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:relation_search_bar"><div class="ep_subjectinput_searchbar">Search for title: <epc:pin name="input"/> <epc:pin name="search_button"/> <epc:pin name="clear_button"/></div></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:search_search_button">Search</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:search_clear_button">Clear</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:add">Add</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:remove">Remove</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:title">Collection content</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:search_heading"><h3>Search For Items</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:search_results_heading"><h3>Search Results</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:folder_heading"><h3>Choose From Your Working Folder</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:bookmarks_heading"><h3>Choose From Your Bookmarks</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:your_deposits_heading"><h3>Your Deposited Items</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:current_selected"><p class="ep_cs_current_header">Resources currently in this collection: </p></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:nothing_selected">No items currently selected.</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:no_deposits">You have not deposited any items.</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:existing_heading"><h3>Items belonging to this collection</h3></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:no_bookmarks">You have not bookmarked any items.</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:no_working_folder_items">There are no items in your working folder.</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:no_js_instructions">Select the shares you wish to add to your collection from the search results displayed below, then click &quot;Add all&quot; to add them.</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:tab_bookmarks">My Bookmarks</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:tab_userdeposits">My Deposits</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:tab_search">Search</epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:add_all_resources">Add All Resources</epp:phrase>
+
 </epp:phrases>
