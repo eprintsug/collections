@@ -110,17 +110,18 @@ sub render
 			$dom = $self->{session}->make_doc_fragment;
 			$dom->appendChild( $self->{session}->html_phrase(
 				"lib/eprint:eprint_gone" ) );
-			my $replacement = new EPrints::DataObj::EPrint(
-				$self->{session},
-				$self->get_value( "replacedby" ) );
-			if( defined $replacement )
-			{
-				my $cite = $replacement->render_citation_link;
-				$dom->appendChild(
-					$self->{session}->html_phrase(
-						"lib/eprint:later_version",
-						citation => $cite ) );
-			}
+#RM replacedby removed from 3.3.13 so removing... will take advisement on better ways to handle the deletion case...
+#			my $replacement = new EPrints::DataObj::EPrint(
+#				$self->{session},
+#				$self->get_value( "replacedby" ) );
+#			if( defined $replacement )
+#			{
+#				my $cite = $replacement->render_citation_link;
+#				$dom->appendChild(
+#					$self->{session}->html_phrase(
+#						"lib/eprint:later_version",
+#						citation => $cite ) );
+#			}
 		}
 		else
 		{
