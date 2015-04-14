@@ -62,7 +62,7 @@
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:folder_heading"><h3>Choose From Your Working Folder</h3></epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:bookmarks_heading"><h3>Choose From Your Bookmarks</h3></epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:your_deposits_heading"><h3>Your Deposited Items</h3></epp:phrase>
-	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:current_selected"><p class="ep_cs_current_header">Resources currently in this collection: </p></epp:phrase>
+	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:current_selected"><p class="ep_cs_current_header">Collections that currently contain this resource: </p></epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:nothing_selected">No items currently selected.</epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:no_deposits">You have not deposited any items.</epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:existing_heading"><h3>Items belonging to this collection</h3></epp:phrase>
