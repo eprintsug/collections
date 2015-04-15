@@ -1,179 +1,149 @@
 <?xml version='1.0' encoding='utf-8'?>
-<epm id='/id/epm/collections' xmlns='http://eprints.org/ep2/data/2.0'>
+<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://bridr.ep.devorkin:8090/id/epm/collections'>
   <epmid>collections</epmid>
   <eprintid>226</eprintid>
-  <uri>http://bazaar.eprints.org/id/epm/collections</uri>
+  <uri>/id/epm/collections</uri>
   <documents>
-    <document id='/id/document/1253'>
-      <docid>1253</docid>
-      <rev_number>1</rev_number>
+    <document>
       <files>
-        <file id='/id/file/4530'>
-          <fileid>4530</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
           <filename>epm/collections/cfg/cfg.d/x_collection.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>9caee0ded1074b608929e3807c818aa0</hash>
+          <hash>799caaf03f0098ece249b2a6df3112c7</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2453</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>2548</filesize>
         </file>
-        <file id='/id/file/4531'>
-          <fileid>4531</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cfg/citations/eprint/collection_item.xml</filename>
-          <mime_type>application/xml</mime_type>
-          <hash>3043c985632df91c31be6ba468e68634</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>2692</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
-        </file>
-        <file id='/id/file/4532'>
-          <fileid>4532</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cfg/citations/eprint/collection_select.xml</filename>
+          <filename>citations/eprint/collection_select.xml</filename>
           <mime_type>application/xml</mime_type>
           <hash>e60dc62d1e52d57bac9abf6ea00bdd2c</hash>
           <hash_type>MD5</hash_type>
           <filesize>470</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
         </file>
-        <file id='/id/file/4533'>
-          <fileid>4533</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cfg/lang/en/phrases/collection.xml</filename>
+          <filename>citations/eprint/collection_item.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>b7b2fc38e5c4e599e8b2cb32d8d35ecb</hash>
+          <hash>3043c985632df91c31be6ba468e68634</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4405</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>2692</filesize>
         </file>
-        <file id='/id/file/4534'>
-          <fileid>4534</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cfg/static/javascript/auto/collectionselect.js</filename>
+          <filename>static/images/epm/collections.png</filename>
+          <mime_type>image/png</mime_type>
+          <hash>7d15619cffa15f30944214e5146aa134</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>168295</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>static/javascript/auto/collectionselect.js</filename>
           <mime_type>text/plain</mime_type>
-          <hash>c511b98853ca7294acb5782f834e9f93</hash>
+          <hash>21bfbe3f942c54ad65bda7ea90db10e2</hash>
           <hash_type>MD5</hash_type>
-          <filesize>1507</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>3020</filesize>
         </file>
-        <file id='/id/file/4535'>
-          <fileid>4535</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cfg/workflows/eprint/collection.xml</filename>
+          <filename>workflows/eprint/collection.xml</filename>
           <mime_type>application/xml</mime_type>
           <hash>444a80c6e80eded48fef43a79fc21651</hash>
           <hash_type>MD5</hash_type>
           <filesize>472</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
         </file>
-        <file id='/id/file/4536'>
-          <fileid>4536</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>epm/collections/cgi/users/collection_select</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>ceb9ff314f149751ea34870a41d7af4e</hash>
+          <filename>lang/en/phrases/collection.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>5ec0a5c9551a3803b75664b520f3972f</hash>
           <hash_type>MD5</hash_type>
-          <filesize>1502</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>7436</filesize>
         </file>
-        <file id='/id/file/4537'>
-          <fileid>4537</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
           <filename>plugins/EPrints/Plugin/Collection.pm</filename>
-          <mime_type>inode/symlink</mime_type>
-          <hash>d8a209186c64f563d070011305cddcf2</hash>
+          <mime_type>text/plain</mime_type>
+          <hash>5d2e5154792955b2275ed3cf73f757f1</hash>
           <hash_type>MD5</hash_type>
-          <filesize>9455</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>10902</filesize>
         </file>
-        <file id='/id/file/4538'>
-          <fileid>4538</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/CollectionSelect.pm</filename>
-          <mime_type>inode/symlink</mime_type>
-          <hash>e47488bc54bc937ca16ed8164619ee54</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>12990</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
-        </file>
-        <file id='/id/file/4539'>
-          <fileid>4539</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionEdit.pm</filename>
-          <mime_type>inode/symlink</mime_type>
-          <hash>de8fdc7c336bdec36861b1e38ec8d544</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>287</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
-        </file>
-        <file id='/id/file/4540'>
-          <fileid>4540</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1253</objectid>
           <filename>plugins/EPrints/Plugin/Screen/NewCollection.pm</filename>
-          <mime_type>inode/symlink</mime_type>
+          <mime_type>text/plain</mime_type>
           <hash>31335d879cc4baec20d598bbace3fde5</hash>
           <hash_type>MD5</hash_type>
           <filesize>1157</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
         </file>
-        <file id='/id/file/4541'>
-          <fileid>4541</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1253</objectid>
-          <filename>static/images/epm/collections.png</filename>
-          <mime_type>inode/symlink</mime_type>
-          <hash>7d15619cffa15f30944214e5146aa134</hash>
+          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionDetails.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>0fe3d206548927bc5c84ede18a822a27</hash>
           <hash_type>MD5</hash_type>
-          <filesize>168295</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
+          <filesize>680</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionEdit.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>7de957024f0d567b52adcdc8331b4cdd</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>674</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/CollectionSelect.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>3af7c707b96c8478c1c0e0b3d07fde8b</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>13575</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/AddToCollection.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>241c3bbfb7cd361f0cc78fd17c5b5989</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>14288</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>epm/collections/cgi/users/collection_select</filename>
+          <mime_type>text/x-perl</mime_type>
+          <hash>2be627fa154eadf0d3b047346546de79</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1703</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>epm/collections/cgi/users/add_to_collection</filename>
+          <mime_type>text/x-perl</mime_type>
+          <hash>2be627fa154eadf0d3b047346546de79</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1703</filesize>
         </file>
       </files>
-      <eprintid>226</eprintid>
-      <pos>1</pos>
-      <placement>1</placement>
-      <mime_type>inode/symlink</mime_type>
-      <format>other</format>
-      <language>en</language>
-      <security>public</security>
-      <main>static/images/epm/collections.png</main>
+      <mime_type>text/x-perl</mime_type>
+      <format>text</format>
+      <main>epm/collections/cgi/users/add_to_collection</main>
       <content>install</content>
     </document>
-    <document id='/id/document/1254'>
-      <docid>1254</docid>
-      <rev_number>1</rev_number>
+    <document>
       <files>
-        <file id='/id/file/4542'>
-          <fileid>4542</fileid>
+        <file>
           <datasetid>document</datasetid>
-          <objectid>1254</objectid>
           <filename>static/images/epm/collections.png</filename>
-          <mime_type>inode/symlink</mime_type>
+          <mime_type>image/png</mime_type>
           <hash>7d15619cffa15f30944214e5146aa134</hash>
           <hash_type>MD5</hash_type>
           <filesize>168295</filesize>
-          <mtime>2012-08-02 13:09:18</mtime>
         </file>
       </files>
-      <eprintid>226</eprintid>
-      <pos>2</pos>
-      <placement>2</placement>
-      <mime_type>inode/symlink</mime_type>
       <format>image</format>
-      <language>en</language>
-      <security>public</security>
       <main>static/images/epm/collections.png</main>
       <content>coverimage</content>
     </document>
@@ -209,7 +179,7 @@
       <id>mrt@ecs.soton.ac.uk</id>
     </item>
   </creators>
-  <datestamp>2012-08-02 13:09:18</datestamp>
+  <datestamp>2015-04-15 19:12:24</datestamp>
   <title>Collections</title>
   <description>Collections package for EPrints allows users to make collections of items. A collection has a page in the repository so users can see each others collections.</description>
   <home_page>http://edshare.org.uk</home_page>
