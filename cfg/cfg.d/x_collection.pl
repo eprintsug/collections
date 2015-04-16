@@ -77,3 +77,46 @@ $c->{eprint_render} = sub
 
 };
 
+#This will allow us to override the render fundtion for relations and provide links between collection and collected
+push @{ $c->{fields}->{eprint} },
+{
+        name => "relation",
+        type=>"compound", multiple=>1,
+        fields => [
+                {
+                        sub_name => "type",
+                        type => "text",
+                        replace_core => 1,
+                },
+                {
+                        sub_name => "uri",
+                        type => "text",
+                        replace_core => 1,
+                },
+        ],
+        render_value => "render_relation",
+        replace_core => 1,
+};
+#TODO see what this does to other relation types...
+$c->{render_relation} = sub
+{
+        my( $session, $field, $value, $alllangs, $nolink, $object) = @_;
+
+        my $repo = $session->get_repository();
+        my $frag = $session->make_doc_fragment();
+	$frag->appendChild(my $ul = $repo->make_element("ul", class=>"relations_list"));
+	if($object->is_collection){
+		for my $part($object->get_related_objects("http://purl.org/dc/terms/hasPart")){
+			$ul->appendChild(my $li = $repo->make_element("li"));
+			$li->appendChild(my $a =$repo->make_element("a", href=> $part->uri));
+			$a->appendChild($part->render_citation("brief"));
+		}
+	}else{
+		for my $part($object->get_related_objects("http://purl.org/dc/terms/isPartOf")){
+			$ul->appendChild(my $li = $repo->make_element("li"));
+			$li->appendChild(my $a =$repo->make_element("a", href=> $part->uri));
+			$a->appendChild($part->render_citation("brief"));
+		}
+    	}
+        return $frag;
+};
