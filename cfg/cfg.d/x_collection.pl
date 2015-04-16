@@ -62,6 +62,7 @@ $c->{collection_eprint_render} = $c->{eprint_render};
 
 #overwrite collection_render in order to make a custom render method for collections
 $c->{collection_render} = $c->{eprint_render};
+#Overwritten for data in cfg.d/xx_collection_render_for_data.pl, remove this file for default/alternative render
 
 $c->{eprint_render} = sub
 {
@@ -73,5 +74,6 @@ $c->{eprint_render} = sub
 	}
 	
         return $session->get_repository->call("collection_render", $eprint, $session, $preview );
+
 };
 

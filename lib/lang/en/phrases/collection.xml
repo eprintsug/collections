@@ -74,4 +74,6 @@
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:tab_search">Search</epp:phrase>
 	<epp:phrase id="Plugin/InputForm/Component/Field/AddToCollection:add_all_resources">Add All Resources</epp:phrase>
 
+	<epp:phrase id="collections:items_in_collection_title">Items in this collection</epp:phrase>
+
 </epp:phrases>
