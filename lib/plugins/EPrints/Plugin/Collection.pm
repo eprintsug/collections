@@ -373,7 +373,7 @@ sub get_parent_collections
 	my( $self, $session ) = @_;
 
 #	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
-	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->internal_uri.';';
+	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri="'.$self->internal_uri.'";';
 
 	my $sth = $session->get_database->prepare( $sql );
 	$session->get_database->execute( $sth, $sql );
@@ -394,7 +394,7 @@ sub get_parent_collections_hash
 	my( $self, $session ) = @_;
 	
 #	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->get_id.';';
-	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri='.$self->internal_uri.';';
+	my $sql = 'SELECT eprintid FROM `eprint_relation_uri` WHERE relation_uri="'.$self->internal_uri.'";';
 
 	my $sth = $session->get_database->prepare( $sql );
 	$session->get_database->execute( $sth, $sql );

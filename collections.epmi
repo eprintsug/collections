@@ -1,11 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
-<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://bbkdr.ep.devorkin/id/epm/collections'>
+<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://localhost:8080/id/epm/collections'>
   <epmid>collections</epmid>
   <eprintid>226</eprintid>
-  <uri>http://bridr.ep.devorkin:8090/id/epm/collections</uri>
+  <uri>http://bbkdr.ep.devorkin/id/epm/collections</uri>
   <documents>
     <document>
       <files>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>citations/eprint/collection_for_data_item.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>fc0cefe4b3e891d89c766ecf7b977942</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>16371</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>citations/eprint/collection_item.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>3043c985632df91c31be6ba468e68634</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>2692</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>citations/eprint/collection_select.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>e60dc62d1e52d57bac9abf6ea00bdd2c</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>470</filesize>
+        </file>
         <file>
           <datasetid>document</datasetid>
           <filename>epm/collections/cfg/cfg.d/x_collection.pl</filename>
@@ -24,27 +48,75 @@
         </file>
         <file>
           <datasetid>document</datasetid>
-          <filename>citations/eprint/collection_select.xml</filename>
-          <mime_type>application/xml</mime_type>
-          <hash>e60dc62d1e52d57bac9abf6ea00bdd2c</hash>
+          <filename>epm/collections/cgi/users/add_to_collection</filename>
+          <mime_type>text/x-perl</mime_type>
+          <hash>2be627fa154eadf0d3b047346546de79</hash>
           <hash_type>MD5</hash_type>
-          <filesize>470</filesize>
+          <filesize>1703</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
-          <filename>citations/eprint/collection_item.xml</filename>
-          <mime_type>application/xml</mime_type>
-          <hash>3043c985632df91c31be6ba468e68634</hash>
+          <filename>epm/collections/cgi/users/collection_select</filename>
+          <mime_type>text/x-perl</mime_type>
+          <hash>2be627fa154eadf0d3b047346546de79</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2692</filesize>
+          <filesize>1703</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
-          <filename>citations/eprint/collection_for_data_item.xml</filename>
+          <filename>lang/en/phrases/collection.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>fc0cefe4b3e891d89c766ecf7b977942</hash>
+          <hash>cea4f0d8ab103f9352d5108b979c819b</hash>
           <hash_type>MD5</hash_type>
-          <filesize>16371</filesize>
+          <filesize>7529</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/Collection.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>bbedbdf7781f70d395743d09a39be769</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>10906</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/AddToCollection.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>241c3bbfb7cd361f0cc78fd17c5b5989</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>14288</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/CollectionSelect.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>3af7c707b96c8478c1c0e0b3d07fde8b</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>13575</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionDetails.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>0fe3d206548927bc5c84ede18a822a27</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>680</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionEdit.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>7de957024f0d567b52adcdc8331b4cdd</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>674</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>plugins/EPrints/Plugin/Screen/NewCollection.pm</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>31335d879cc4baec20d598bbace3fde5</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1157</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -70,82 +142,10 @@
           <hash_type>MD5</hash_type>
           <filesize>472</filesize>
         </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>lang/en/phrases/collection.xml</filename>
-          <mime_type>application/xml</mime_type>
-          <hash>cea4f0d8ab103f9352d5108b979c819b</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>7529</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/Collection.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>5d2e5154792955b2275ed3cf73f757f1</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>10902</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/Screen/NewCollection.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>31335d879cc4baec20d598bbace3fde5</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>1157</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionDetails.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>0fe3d206548927bc5c84ede18a822a27</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>680</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/Screen/EPrint/CollectionEdit.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>7de957024f0d567b52adcdc8331b4cdd</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>674</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/CollectionSelect.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>3af7c707b96c8478c1c0e0b3d07fde8b</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>13575</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>plugins/EPrints/Plugin/InputForm/Component/Field/AddToCollection.pm</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>241c3bbfb7cd361f0cc78fd17c5b5989</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>14288</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>epm/collections/cgi/users/collection_select</filename>
-          <mime_type>text/x-perl</mime_type>
-          <hash>2be627fa154eadf0d3b047346546de79</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>1703</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
-          <filename>epm/collections/cgi/users/add_to_collection</filename>
-          <mime_type>text/x-perl</mime_type>
-          <hash>2be627fa154eadf0d3b047346546de79</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>1703</filesize>
-        </file>
       </files>
-      <mime_type>text/x-perl</mime_type>
-      <format>text</format>
-      <main>epm/collections/cgi/users/add_to_collection</main>
+      <mime_type>application/xml</mime_type>
+      <format>other</format>
+      <main>workflows/eprint/collection.xml</main>
       <content>install</content>
     </document>
     <document>
@@ -164,7 +164,7 @@
       <content>coverimage</content>
     </document>
   </documents>
-  <version>1.0.16</version>
+  <version>1.0.17</version>
   <creators>
     <item>
       <name>
