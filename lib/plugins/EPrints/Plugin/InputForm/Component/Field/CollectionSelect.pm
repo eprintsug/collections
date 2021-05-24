@@ -456,6 +456,8 @@ sub _render_checkbox_table
 	my $is_first = 1;
 	foreach my $rec ( $list->get_records )
 	{
+		next if $rec->value( "metadata_visibility" ) ne "show";
+
 		$tr = $session->make_element( 'tr' );
 		$table->appendChild( $tr );
 

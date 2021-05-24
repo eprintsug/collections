@@ -39,8 +39,9 @@ unless( defined $collection )
 	print STDOUT "collection not defined";
 	return;
 }
+
 # can user edit?
-unless( $repo->current_user->allow( "eprint/edit" ) )
+unless( $user->allow( "eprint/edit", $collection ) )
 {
 	print STDOUT "user cannot edit eprints.";
 	return;

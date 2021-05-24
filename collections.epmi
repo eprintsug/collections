@@ -2,7 +2,7 @@
 <epm xmlns='http://eprints.org/ep2/data/2.0' id='http://localhost:8080/id/epm/collections'>
   <epmid>collections</epmid>
   <eprintid>226</eprintid>
-  <uri>http://bbkdr.ep.devorkin/id/epm/collections</uri>
+  <uri>http://localhost:8080/id/epm/collections</uri>
   <documents>
     <document>
       <files>
@@ -50,7 +50,7 @@
           <datasetid>document</datasetid>
           <filename>epm/collections/cgi/users/add_to_collection</filename>
           <mime_type>text/x-perl</mime_type>
-          <hash>2be627fa154eadf0d3b047346546de79</hash>
+          <hash>56a75c1cc39b2931f9b458de532d45ad</hash>
           <hash_type>MD5</hash_type>
           <filesize>1703</filesize>
         </file>
@@ -58,7 +58,7 @@
           <datasetid>document</datasetid>
           <filename>epm/collections/cgi/users/collection_select</filename>
           <mime_type>text/x-perl</mime_type>
-          <hash>2be627fa154eadf0d3b047346546de79</hash>
+          <hash>56a75c1cc39b2931f9b458de532d45ad</hash>
           <hash_type>MD5</hash_type>
           <filesize>1703</filesize>
         </file>
@@ -90,9 +90,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/InputForm/Component/Field/CollectionSelect.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>3af7c707b96c8478c1c0e0b3d07fde8b</hash>
+          <hash>836c7a528928c309b90db197f3f5a9a1</hash>
           <hash_type>MD5</hash_type>
-          <filesize>13575</filesize>
+          <filesize>13634</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -164,7 +164,7 @@
       <content>coverimage</content>
     </document>
   </documents>
-  <version>1.0.17</version>
+  <version>1.0.18</version>
   <creators>
     <item>
       <name>
